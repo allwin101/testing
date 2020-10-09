@@ -33,7 +33,7 @@
     "tomcat-embed-el": "8.5.23",
     "winston": "^3.0.0",
     "pluggy": "0.13.1",
-    "jsonwebtoken": "8.5.1",
+    "jsonwebtoken": "7.5",
     "x-xss-protection": "^1.1.0"
   }
 }
