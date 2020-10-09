@@ -1,4 +1,4 @@
-name: Dependency-Automations-1
+name: Dependency
 
 on:
   push:
