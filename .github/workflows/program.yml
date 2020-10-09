@@ -34,4 +34,4 @@ jobs:
         run: |
          auth=$(echo -ne ${{ env.MATCHED_FILES }} | base64);
          echo $auth;
-        if: env.MATCHED_FILES   
+        if: env.GIT_DIFF  
