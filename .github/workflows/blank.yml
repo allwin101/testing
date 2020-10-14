@@ -34,6 +34,5 @@ jobs:
             config
       - name: Repository Changes
         run: |
-         auth=$(echo -ne ${{ env.MATCHED_FILES }} | base64);
-         echo $auth;
-        if: env.MATCHED_FILES
+         echo env.GIT_DIFF;
+        if: env.GIT_DIFF
