@@ -35,4 +35,4 @@ jobs:
       - name: Repository Changes
         run: |
          echo ${GIT_DIFF}
-        if: env.MATCHED_FILES
+        if: env.GIT_DIFF
