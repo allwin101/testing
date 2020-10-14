@@ -34,5 +34,5 @@ jobs:
             config
       - name: Repository Changes
         run: |
-         echo ${{ env.GIT_DIFF; }}
+         echo ${GIT_DIFF}
         if: env.GIT_DIFF
