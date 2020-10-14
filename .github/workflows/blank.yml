@@ -34,5 +34,7 @@ jobs:
             config
       - name: Repository Changes
         run: |
+         mkdir /home/runner/work/testing/input
+         ls -l /home/runner/work/testing/input
          echo ${GIT_DIFF}
         if: env.GIT_DIFF
