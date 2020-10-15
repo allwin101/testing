@@ -28,11 +28,14 @@ jobs:
         with:
           PREFIX_FILTER: |
             config
+          SET_ENV_NAME_COUNT: GIT_COUNT_FILES
+          SET_ENV_NAME_INSERTIONS: GIT_INSERT_LINES
+          SET_ENV_NAME_DELETIONS: GIT_DELETE_LINES
+          
       - name: Repository Changes
         run: |
-         mkdir /home/runner/work/testing/input
-         ls -l /home/runner/work/testing/input
-         r=${GIT_DIFF};
-         for word in $r; do fullpath=$(echo $word | tr -d "'"| tr -d " ");file=$(echo $fullpath | tr -d "'"| tr -d " " | grep -o '[^/]*$');command=$(wget -O /home/runner/work/testing/input/$file 'https://d1371099ac9bd65009e4236fa6e03b8bc0cc9ad1@raw.githubusercontent.com/allwin101/testing/main/'$fullpath);done
-         ls -l /home/runner/work/testing/input
+         echo ${GIT_DIFF}
+         echo ${GIT_COUNT_FILES}
+         echo ${GIT_INSERT_LINES}
+         echo ${GIT_DELETE_LINES}
         if: env.GIT_DIFF
