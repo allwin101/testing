@@ -40,7 +40,7 @@ jobs:
          
          if [ $deletelines > 0 ]; then
           if [ $insertlines > 5 ]; then
-          echo "command will run"
+            echo "command will run"
           fi
          fi  
         if: env.GIT_DIFF
