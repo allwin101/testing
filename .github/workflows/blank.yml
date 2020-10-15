@@ -39,7 +39,7 @@ jobs:
          deletelines=${GIT_DELETE_LINES}
          
          if [ $deletelines > 0 ]; then
-          if [ $insertlines > 5]; then
+          if [ $insertlines > 5 ]; then
           echo "command will run"
           fi
          fi  
