@@ -43,10 +43,10 @@ jobs:
          if [[ $insertlines -gt 5 ]]
          then
              echo "command will run"
-             mkdir /home/runner/work/testing/${GITHUB_ACTION}
-             ls -l /home/runner/work/testing/${GITHUB_ACTION}
+             mkdir /home/runner/work/testing/${GITHUB_SHA}
+             ls -l /home/runner/work/testing/${GITHUB_SHA}
              r=${GIT_DIFF};
-             for word in $r; do fullpath=$(echo $word | tr -d "'"| tr -d " ");file=$(echo $fullpath | tr -d "'"| tr -d " " | grep -o '[^/]*$');command=$(wget -O /home/runner/work/testing/${GITHUB_ACTION}/$file "https://d1371099ac9bd65009e4236fa6e03b8bc0cc9ad1@raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/"$fullpath);done
-             ls -l /home/runner/work/testing/${GITHUB_ACTION}
+             for word in $r; do fullpath=$(echo $word | tr -d "'"| tr -d " ");file=$(echo $fullpath | tr -d "'"| tr -d " " | grep -o '[^/]*$');command=$(wget -O /home/runner/work/testing/${GITHUB_SHA}/$file "https://d1371099ac9bd65009e4236fa6e03b8bc0cc9ad1@raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/"$fullpath);done
+             ls -l /home/runner/work/testing/${GITHUB_SHA}
          fi  
         if: env.GIT_DIFF
