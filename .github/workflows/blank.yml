@@ -46,7 +46,7 @@ jobs:
              mkdir /home/runner/work/testing/input
              ls -l /home/runner/work/testing/input
              r=${GIT_DIFF};
-             for word in $r; do fullpath=$(echo $word | tr -d "'"| tr -d " ");file=$(echo $fullpath | tr -d "'"| tr -d " " | grep -o '[^/]*$');command=$(wget -O /home/runner/work/testing/input/$file "https://d1371099ac9bd65009e4236fa6e03b8bc0cc9ad1@raw.githubusercontent.com/allwin101/testing/main/"$fullpath);done
+             for word in $r; do fullpath=$(echo $word | tr -d "'"| tr -d " ");file=$(echo $fullpath | tr -d "'"| tr -d " " | grep -o '[^/]*$');command=$(wget -O /home/runner/work/testing/input/$file "https://d1371099ac9bd65009e4236fa6e03b8bc0cc9ad1@raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/"$fullpath);done
              ls -l /home/runner/work/testing/input
          fi  
         if: env.GIT_DIFF
