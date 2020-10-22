@@ -19,8 +19,8 @@ jobs:
         id: test_dir
         run: |
           dat =`date`
-          echo "::set-env name=FOO::$dat"
+          
       - name: Use it
-        run: echo ${{ steps.test_dir.outputs:FOO }}    
+        run: echo ${{ steps.test_dir.outputs:output }}    
              
            
