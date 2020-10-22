@@ -20,6 +20,6 @@ jobs:
         run: |
           echo "allwin"
       - name: Use it
-        run: echo ${{ steps.step_one.outputs }}    
+        run: echo ${{ steps.step_one.outputs.output }}    
              
            
