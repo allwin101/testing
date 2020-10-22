@@ -16,6 +16,10 @@ jobs:
 
     steps:
       - name: Clean job dir
+        id: test_dir
         run: |
           echo "allwin"
+      - name: Use it
+        run: echo ${{ steps.step_one.outputs }}    
+             
            
