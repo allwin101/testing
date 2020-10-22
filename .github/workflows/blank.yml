@@ -18,8 +18,8 @@ jobs:
       - name: Clean job dir
         id: test_dir
         run: |
-          echo "allwin"
+          echo "::set-output name=FOO::BAR"
       - name: Use it
-        run: echo ${{ steps.step_one.outputs.output }}    
+        run: echo ${{ steps.step_one.outputs.FOO }}    
              
            
