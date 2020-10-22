@@ -22,6 +22,7 @@ jobs:
     steps:
           
       - name: Repository Changes
+      -id: pop
         run: |
          echo ${allwin}
-      -id: pop    
+           
