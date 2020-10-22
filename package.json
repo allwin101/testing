@@ -4,7 +4,7 @@
   "description": "Damn Vulnerable NodeJS Application",
   "main": "server.js",
   "directories": {
-    "doc": "docs"
+    "doc": "docsjjjj"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
