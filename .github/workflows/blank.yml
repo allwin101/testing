@@ -21,4 +21,4 @@ jobs:
           echo "::set-output name=FOO::$(date)"
           
       - name: Use it
-        run: echo ${{ steps.test_dir.outputs:FOO }}    
+        run: echo ${{ steps.test_dir.outputs.FOO }}    
