@@ -22,7 +22,10 @@ jobs:
     steps:
           
       - name: Repository Changes
-      - id: pop
+        id: step_one
         run: |
          echo ${allwin}
+         
+     - name: Use it
+       run: echo ${{ steps.step_one.outputs.FOO }}   
            
