@@ -18,10 +18,7 @@ jobs:
       - name: Clean job dir
         id: test_dir
         run: |
-          dat =`date`
-          echo "::set-output name=FOO::$(date)\n"
+          echo "::set-output name=FOO::$(date)"
           
       - name: Use it
         run: echo ${{ steps.test_dir.outputs:FOO }}    
-             
-           
