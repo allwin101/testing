@@ -18,8 +18,9 @@ jobs:
       - name: Clean job dir
         id: test_dir
         run: |
-          echo "allwin"
+          dat =`date`
+          echo "::set-env name=FOO::dat"
       - name: Use it
-        run: echo ${{ steps.test_dir.outputs }}    
+        run: echo ${{ steps.test_dir.outputs:FOO }}    
              
            
