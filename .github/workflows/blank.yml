@@ -8,7 +8,7 @@ on:
       - main
     paths-ignore:
       - '**.js'
-      - '.github/workflows/blank.yml'
+      - '.github/workflows/blank.yml
 
 jobs:
 
@@ -20,33 +20,8 @@ jobs:
         python-version: [3.7]
 
     steps:
-      - uses: actions/checkout@v2
-        env:
-          G_SECRET: ${{ secrets.G_TOKEN }}
-      
-      - uses: technote-space/get-diff-action@v3
-        with:
-          PREFIX_FILTER: |
-            config
-          SET_ENV_NAME_COUNT: GIT_COUNT_FILES
-          SET_ENV_NAME_INSERTIONS: GIT_INSERT_LINES
-          SET_ENV_NAME_DELETIONS: GIT_DELETE_LINES
           
       - name: Repository Changes
         run: |
-         countfiles=${GIT_COUNT_FILES}
-         insertlines=${GIT_INSERT_LINES}
-         deletelines=${GIT_DELETE_LINES}
-         
-         echo ${GIT_INSERT_LINES}
-         
-         if [[ $insertlines -gt 5 ]]
-         then
-             echo "command will run"
-             mkdir /home/runner/work/testing/${GITHUB_SHA}
-             ls -l /home/runner/work/testing/${GITHUB_SHA}
-             r=${GIT_DIFF};
-             for word in $r; do fullpath=$(echo $word | tr -d "'"| tr -d " ");file=$(echo $fullpath | tr -d "'"| tr -d " " | grep -o '[^/]*$');command=$(wget -O /home/runner/work/testing/${GITHUB_SHA}/$file "https://d1371099ac9bd65009e4236fa6e03b8bc0cc9ad1@raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/"$fullpath);done
-             ls -l /home/runner/work/testing/${GITHUB_SHA}
-         fi  
-        if: env.GIT_DIFF
+         echo ${allwin}
+      -id: pop    
