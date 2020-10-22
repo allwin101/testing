@@ -27,5 +27,5 @@ jobs:
          echo "working"
          
       - name: Use it
-        run: echo ${{ steps.step_one.outputs.FOO }}   
+        run: echo ${{ steps.step_one.outputs}}   
            
